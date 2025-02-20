@@ -52,7 +52,7 @@ const Index = () => {
       </section>
 
       {/* Key Factors Section */}
-      <section className="container mx-auto px-4 py-16 bg-[#FFE8E9]/80">
+      <section className="container mx-auto px-4 py-16 bg-white/80">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -78,7 +78,7 @@ const Index = () => {
       </section>
 
       {/* Download Guide Section */}
-      <section className="container mx-auto px-4 py-16 bg-gradient-to-br from-[#FEC6A1]/30 to-[#FFE8E9]/30">
+      <section className="container mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -102,7 +102,7 @@ const Index = () => {
       </section>
 
       {/* Important Questions Section */}
-      <section className="container mx-auto px-4 py-16 bg-[#E5DEFF]/60">
+      <section className="container mx-auto px-4 py-16 bg-white/80">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -130,7 +130,7 @@ const Index = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="container mx-auto px-4 py-16 bg-gradient-to-br from-[#F2FCE2]/40 to-[#E5DEFF]/40">
+      <section className="container mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
