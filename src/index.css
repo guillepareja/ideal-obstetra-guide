@@ -64,3 +64,28 @@
     }
   }
 }
+
+/* Genesia brand colors */
+.text-brand-blue {
+  color: #221F26;
+}
+
+.bg-brand-blue {
+  background-color: #221F26;
+}
+
+.text-brand-red {
+  color: #ea384c;
+}
+
+.bg-brand-red {
+  background-color: #ea384c;
+}
+
+.text-brand-gray {
+  color: #C8C8C9;
+}
+
+.bg-brand-gray {
+  background-color: #C8C8C9;
+}
