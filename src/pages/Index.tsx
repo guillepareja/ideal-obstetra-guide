@@ -50,6 +50,11 @@ const Index = () => {
         {/* Hero Section */}
         <section className="container mx-auto px-4 pt-20 pb-16 text-center">
           <motion.div {...fadeInUp} className="max-w-3xl mx-auto">
+            <img 
+              src="https://colombia.genesia.la/wp-content/uploads/2025/01/icon-512x512-1.png"
+              alt="Logo Genesia"
+              className="w-24 h-24 mx-auto mb-8"
+            />
             <h1 className="text-4xl md:text-5xl font-bold text-brand-blue mb-6">
               Encuentra al Obstetra Ideal para Ti
             </h1>
