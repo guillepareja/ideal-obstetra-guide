@@ -1,12 +1,156 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { Heart, CheckCircle2, HelpCircle, Download, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 const Index = () => {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-b from-primary/20 to-background">
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 pt-20 pb-16 text-center">
+        <motion.div {...fadeInUp} className="max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Encuentra al Obstetra Ideal para Ti
+          </h1>
+          <p className="text-xl text-gray-700 mb-8">
+            Tu guía para una experiencia segura y respetada durante el embarazo
+          </p>
+          <div className="flex items-center justify-center gap-4">
+            <Heart className="text-red-400 w-8 h-8" />
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Why It's Important Section */}
+      <section className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="max-w-4xl mx-auto"
+        >
+          <h2 className="text-3xl font-bold text-center mb-12">¿Por qué es importante elegir bien?</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <p className="text-gray-700">No todos los obstetras son iguales: necesitas un profesional con el que te sientas cómoda, segura y respetada.</p>
+            </Card>
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <p className="text-gray-700">La atención médica personalizada y de confianza es clave para un embarazo saludable.</p>
+            </Card>
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <p className="text-gray-700">Tu obstetra será tu principal guía en cada consulta, ecografía y decisión sobre el parto.</p>
+            </Card>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Key Factors Section */}
+      <section className="container mx-auto px-4 py-16 bg-secondary/20">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="max-w-4xl mx-auto"
+        >
+          <h2 className="text-3xl font-bold text-center mb-12">¿Cómo saber si un obstetra es el indicado para ti?</h2>
+          <div className="space-y-4">
+            {[
+              "Experiencia y formación en embarazos de bajo y alto riesgo.",
+              "Afinidad con tu estilo de comunicación y necesidades personales.",
+              "Disponibilidad y accesibilidad para responder dudas y emergencias.",
+              "Filosofía de atención alineada con tus deseos sobre el parto y la lactancia.",
+              "Respeto por tus derechos como paciente y por el concepto de parto respetado."
+            ].map((factor, index) => (
+              <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
+                <CheckCircle2 className="text-green-500 w-6 h-6 flex-shrink-0 mt-1" />
+                <p className="text-gray-700">{factor}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Download Guide Section */}
+      <section className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          className="max-w-3xl mx-auto text-center"
+        >
+          <div className="bg-primary/30 rounded-2xl p-8 md:p-12">
+            <HelpCircle className="w-12 h-12 mx-auto mb-6 text-gray-700" />
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">¿No sabes por dónde empezar?</h2>
+            <p className="text-lg mb-8">
+              Descarga nuestra guía gratuita con todo lo que necesitas saber para elegir el obstetra ideal.
+            </p>
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/80 text-gray-800"
+            >
+              <Download className="mr-2 h-5 w-5" /> Descargar Guía Gratuita
+            </Button>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Important Questions Section */}
+      <section className="container mx-auto px-4 py-16 bg-secondary/20">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+          className="max-w-4xl mx-auto"
+        >
+          <h2 className="text-3xl font-bold text-center mb-12">Preguntas que deberías hacer en tu primera consulta</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              "¿Estará presente en el parto o hay otro profesional en su equipo?",
+              "¿Cuál es su postura sobre la inducción del parto o el uso de anestesia?",
+              "¿Cómo maneja las emergencias y cuál es su disponibilidad fuera de horario?",
+              "¿Con qué clínica u hospital trabaja?",
+              "¿Qué opina sobre el parto natural vs. cesárea?"
+            ].map((question, index) => (
+              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-3">
+                  <ArrowRight className="text-primary w-6 h-6 flex-shrink-0 mt-1" />
+                  <p className="text-gray-700">{question}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+          className="max-w-3xl mx-auto text-center"
+        >
+          <div className="bg-gradient-to-br from-primary/30 to-secondary/30 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl font-bold mb-6">Tu bienestar y el de tu bebé son lo más importante</h2>
+            <p className="text-lg mb-8">
+              No dejes esta decisión al azar. Tómate el tiempo de investigar, hacer preguntas y elegir con confianza.
+            </p>
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/80 text-gray-800"
+            >
+              <Download className="mr-2 h-5 w-5" /> Descarga ahora la guía completa
+            </Button>
+          </div>
+        </motion.div>
+      </section>
     </div>
   );
 };
