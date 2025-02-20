@@ -1,3 +1,4 @@
+
 import { Heart, CheckCircle2, HelpCircle, Download, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -133,6 +134,7 @@ const Index = () => {
               <Button
                 size="lg"
                 className="bg-brand-red hover:bg-brand-red/90 text-white"
+                onClick={() => window.location.href = "https://genesia.la/guiaobstetra.pdf"}
               >
                 <Download className="mr-2 h-5 w-5" /> Descargar Guía Gratuita
               </Button>
@@ -184,6 +186,7 @@ const Index = () => {
               <Button
                 size="lg"
                 className="bg-brand-red hover:bg-brand-red/90 text-white"
+                onClick={() => window.location.href = "https://genesia.la/guiaobstetra.pdf"}
               >
                 <Download className="mr-2 h-5 w-5" /> Descarga ahora la guía completa
               </Button>
