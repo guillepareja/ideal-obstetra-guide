@@ -12,7 +12,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-[#F3ACB0] to-[#D2737A]">
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-20 pb-16 text-center">
         <motion.div {...fadeInUp} className="max-w-3xl mx-auto">
@@ -52,7 +52,7 @@ const Index = () => {
       </section>
 
       {/* Key Factors Section */}
-      <section className="container mx-auto px-4 py-16 bg-brand-gray/10">
+      <section className="container mx-auto px-4 py-16 bg-white/80">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -85,7 +85,7 @@ const Index = () => {
           transition={{ delay: 0.6 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <div className="bg-brand-gray/10 rounded-2xl p-8 md:p-12">
+          <div className="bg-white/90 rounded-2xl p-8 md:p-12">
             <HelpCircle className="w-12 h-12 mx-auto mb-6 text-brand-blue" />
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-brand-blue">¿No sabes por dónde empezar?</h2>
             <p className="text-lg mb-8 text-brand-blue/80">
@@ -102,7 +102,7 @@ const Index = () => {
       </section>
 
       {/* Important Questions Section */}
-      <section className="container mx-auto px-4 py-16 bg-brand-gray/10">
+      <section className="container mx-auto px-4 py-16 bg-white/80">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -137,7 +137,7 @@ const Index = () => {
           transition={{ delay: 1 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <div className="bg-gradient-to-br from-brand-gray/10 to-brand-gray/20 rounded-2xl p-8 md:p-12">
+          <div className="bg-white/90 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl font-bold mb-6 text-brand-blue">Tu bienestar y el de tu bebé son lo más importante</h2>
             <p className="text-lg mb-8 text-brand-blue/80">
               No dejes esta decisión al azar. Tómate el tiempo de investigar, hacer preguntas y elegir con confianza.
